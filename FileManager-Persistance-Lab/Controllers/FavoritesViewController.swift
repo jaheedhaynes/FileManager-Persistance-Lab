@@ -59,8 +59,6 @@ class FavoritesViewController: UIViewController {
         
         detailVC.imageDetails = cellInRow
         
-        detailVC.removeButton = true
-        
     }
 }
 

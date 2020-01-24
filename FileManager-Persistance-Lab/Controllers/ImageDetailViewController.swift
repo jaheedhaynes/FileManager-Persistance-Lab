@@ -21,7 +21,7 @@ class ImageDetailViewController: UIViewController {
     
     var imageDetails: Image!
     
-    var removeButton = false
+ 
     
     var dataPersistence = PersistenceHelper()
     
@@ -39,9 +39,7 @@ class ImageDetailViewController: UIViewController {
     
     private func updateUI() {
         
-        if removeButton == true {
-            favoriteButton.isHidden = true
-        }
+ 
         
         imageView.getImage(with: imageDetails.largeImageURL ?? "") { [weak self] (result) in
             
@@ -58,9 +56,9 @@ class ImageDetailViewController: UIViewController {
             }
         }
         
-        likesLabel.text = imageDetails.likes?.description
+        likesLabel.text = "Likes: \(imageDetails.likes?.description ?? "")"
         
-        viewsLabel.text = imageDetails.views?.description
+        viewsLabel.text = "Views: \(imageDetails.views?.description ?? "")"
     }
     
     //-----------------------------------------------------------------------------------
