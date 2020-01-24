@@ -21,9 +21,10 @@ class ImageDetailViewController: UIViewController {
     
     var imageDetails: Image!
     
- 
-    
     var dataPersistence = PersistenceHelper()
+    
+    let tap = UITapGestureRecognizer()
+    
     
     //-----------------------------------------------------------------------------------
 
@@ -32,10 +33,15 @@ class ImageDetailViewController: UIViewController {
 
         updateUI()
         
+     
+        
     }
     
     //-----------------------------------------------------------------------------------
 
+    @objc func doubleTapped() {
+       
+    }
     
     private func updateUI() {
         
